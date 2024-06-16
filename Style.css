@@ -1,12 +1,13 @@
 body, html{
-
+    font-family: monospace;
     margin: 0;
 }
 
 body{
     display: grid;
     grid-template-columns: 3fr 1fr;
-    font-size: 23px;
+    /*font-size: 23px;*/
+    font-size: 1.2vmax; 
     color: black;
 }
 
@@ -14,15 +15,16 @@ header{
     box-sizing: border-box;
     padding: 0.5em;
     width: 100%;
+    height: 6vmax;
     background-color: rgb(171, 64, 64);
 }
 
 .head input::placeholder{
-    font-size: 21px;
+    font-size: 1.2vmax; 
 }
 .head input{
-    font-size: 21px;
-    height: 21px;
+    font-size: 1.2vmax; 
+    font-size: 1.2vmax; 
     padding: 0.25em 0em 0.25em 0.5em;
     border-radius: 2em;
     width: max-content;
@@ -30,7 +32,8 @@ header{
 }
 .head{
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 2em;
@@ -57,10 +60,10 @@ header{
 .nav{
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
-    width: fit-content;
+    justify-content: flex-start;
+    width: max-content;
     min-width: min-content;
-    max-width: 70%;
+    max-width: max-content;
     height: fit-content;
     text-align: left;
     display: flex;
@@ -93,23 +96,60 @@ aside{
     position: sticky;
     top: 0px;
     width: 100%;
-    height: 500px;
+    height: 100vh;
     background-color: aqua;
-
 }
 
 .side_top{
+    box-sizing: border-box;
+    padding: 10px;
     width: 100%;
     aspect-ratio: 2/1;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     background-color: black;
 }
 
+.block_img{
+    box-sizing: content-box;
+    aspect-ratio: 1/1;
+    min-height: 64px;
+    min-width: 64px;
+    height: 20vmin;
+    width: 20vmin;
+    max-height: 256px;
+    max-width: 256px;
+}
+
+.block_img_mini{
+    box-sizing: content-box;
+    aspect-ratio: 1/1;
+    min-height: 32px;
+    min-width: 32px;
+    height: 10vmin;
+    width: 10vmin;
+    max-height: 64px;
+    max-width: 64px;
+}
+
+.side_top img{
+    width: 100%;
+    height: 100%;
+}
+/*
 .side_top img{
     min-height: 64px;
-    height: 20%;
-    max-height: 20%;
+    min-width: 64px;
+    width: 30%;
+    max-width: 30%;
+    height: 30%;
+    max-height: 30%;
     aspect-ratio: 1/1;
 }
+*/
 .item{
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -132,4 +172,17 @@ img{
 .preview{
     background-image: url(Logo2.png);
     background-size: cover;
+}
+
+footer{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: max-content;
+    padding: 10px;
+    color: white;
+    background-color: rgb(57, 57, 57);
 }
