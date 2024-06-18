@@ -1,7 +1,6 @@
 @media screen and (orientation: landscape){
     body, html{
-        font-size: 3vh;
-        
+        font-size: 5vh;
     }
 
     body{
@@ -25,6 +24,9 @@
 }
 
 @media screen and (orientation: landscape) and (min-width: 1900px){
+    body, html{
+        font-size: 3vh;
+    }
     .content{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
