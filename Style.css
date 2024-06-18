@@ -1,3 +1,18 @@
+@media screen and (orientation: landscape){
+    body, html{
+        font-size: 5vh;
+    }
+}
+
+@media screen and (orientation: portrait){
+    body{
+        font-size: 5vh;
+        color: red;
+    }
+}
+html{
+    font-size: 20px;
+}
 body, html{
     font-family: monospace;
     margin: 0;
@@ -7,7 +22,6 @@ body{
     display: grid;
     grid-template-columns: 3fr 1fr;
     /*font-size: 23px;*/
-    font-size: 1.2vmax; 
     color: black;
 }
 
@@ -15,16 +29,15 @@ header{
     box-sizing: border-box;
     padding: 0.5em;
     width: 100%;
-    height: 6vmax;
+    height: fit-content;
     background-color: rgb(171, 64, 64);
 }
 
 .head input::placeholder{
-    font-size: 1.2vmax; 
+    font-size: 1em; 
 }
 .head input{
-    font-size: 1.2vmax; 
-    font-size: 1.2vmax; 
+    font-size: 1em; 
     padding: 0.25em 0em 0.25em 0.5em;
     border-radius: 2em;
     width: max-content;
