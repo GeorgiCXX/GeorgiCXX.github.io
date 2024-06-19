@@ -11,6 +11,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
 }
 
 @media screen and (orientation: portrait){
@@ -20,6 +21,11 @@
 
     body{
         grid-template-columns: 4fr 1fr;
+    }
+
+    .content{
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -45,7 +51,6 @@ body, html{
 
 body{
     display: grid;
-    /*font-size: 23px;*/
     color: black;
 }
 
@@ -113,6 +118,7 @@ header{
 .nav a{
     text-align: left;
     margin: 0% 2%;
+    margin-bottom: 0.25em;
     min-height: 0.5em;
 }
 
@@ -142,6 +148,13 @@ aside{
     background-color: rgb(213, 213, 230);
 }
 
+.side{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .side_top{
     box-sizing: border-box;
     padding: 10px;
@@ -153,6 +166,10 @@ aside{
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: rgb(114, 29, 29);
+}
+
+.side_bottom{
+    height: 100%;
 }
 
 .block_img{
@@ -182,9 +199,35 @@ aside{
     height: 100%;
 }
 
-.description{
+.info{
     padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.info_name{
+    background-color: rgb(255, 209, 209);
+    border-radius: 1em;
+    text-align: center;
+}
+
+.info_description{
+    font-size: 0.75em;
+}
+
+.info_tags{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 1em;
+    overflow: scroll;
+}
+
+.info_tags li{
+    display: inline;
+}
+
 .item{
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -194,8 +237,13 @@ aside{
     padding: 0.75em;
     border-radius: 0.75em;
     background-color: rgb(224, 179, 179);
-    
+    border: solid 0.15em rgba(0,0,0,0);
 }
+
+.content > a:hover > div{
+    border: solid 0.15em rgb(114, 29, 29);
+}
+
 img{
     image-rendering: pixelated;
 }
