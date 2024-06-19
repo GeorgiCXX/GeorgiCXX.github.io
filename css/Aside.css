@@ -35,7 +35,8 @@ aside{
     height: 100%;
 }
 .links > div{
-    margin: 0.5em 0.2em 0.5em 0.5em;
+    margin: 0.4em 0.2em 0.4em 0.3em;
+    font-size: 0.7em;
 }
 .side_bottom a{
     box-sizing: content-box;
@@ -71,10 +72,9 @@ aside{
     margin-left: 33%;
 }
 
-@media screen and (orientation: portrait)
-{
-    .links{
-        margin: 0.45em 0.2em 0.45em 0.35em;
-        font-size: 0.8em;
+@media screen and (orientation: landscape) and (min-width: 1900px){
+    .links > div{
+        margin: 0.5em 0.2em 0.5em 0.5em;
+        font-size: 1em;
     }
 }
