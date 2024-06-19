@@ -1,45 +1,3 @@
-@media screen and (orientation: landscape){
-    body, html{
-        font-size: 5vh;
-    }
-
-    body{
-        grid-template-columns: 7fr 1fr;
-    }
-
-    .content{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-}
-
-@media screen and (orientation: portrait){
-    body{
-        font-size: 5vh;
-    }
-
-    body{
-        grid-template-columns: 4fr 1fr;
-    }
-
-    .content{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (orientation: landscape) and (min-width: 1900px){
-    body, html{
-        font-size: 3vh;
-    }
-    .content{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-
 html{
     font-size: 20px;
 }
@@ -60,6 +18,10 @@ header{
     width: 100%;
     height: fit-content;
     background-color: rgb(171, 64, 64);
+}
+
+header a:hover{
+    text-shadow: rgb(114, 29, 29) 2px 2px 2px;
 }
 
 .head input::placeholder{
@@ -83,15 +45,8 @@ header{
     max-height: fit-content;
 }
 
-.homeLogo{
-    min-width: 1em;
-    width: 2em;
-    aspect-ratio: 1/1;
-}
-.homeLogo a{
-    font-size: 46px;
-    text-align: center;
-}
+
+
 .homeLogo img
 {
     width: 1em;
@@ -140,38 +95,6 @@ section{
     padding: 0.5em;
 }
 
-aside{
-    position: sticky;
-    top: 0px;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(213, 213, 230);
-}
-
-.side{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.side_top{
-    box-sizing: border-box;
-    padding: 10px;
-    width: 100%;
-    aspect-ratio: 2/1;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: rgb(114, 29, 29);
-}
-
-.side_bottom{
-    height: 100%;
-}
-
 .block_img{
     box-sizing: content-box;
     aspect-ratio: 1/1;
@@ -200,7 +123,7 @@ aside{
 }
 
 .info{
-    padding-left: 1em;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -220,12 +143,15 @@ aside{
     margin: 0;
     padding: 0;
     list-style: none;
-    height: 1em;
-    overflow: scroll;
+    min-height: 1em;
+    max-height: fit-content;
 }
 
 .info_tags li{
+    font-size: 0.9em;
+    background-color: rgb(255, 190, 190);
     display: inline;
+    overflow: hidden;
 }
 
 .item{
@@ -233,14 +159,18 @@ aside{
     grid-template-columns: 150px 1fr;
     min-width: 300px;
     min-height: 150px;
-    /*margin: 0.5em;*/
+    max-height: fit-content;
     padding: 0.75em;
     border-radius: 0.75em;
     background-color: rgb(224, 179, 179);
     border: solid 0.15em rgba(0,0,0,0);
 }
 
-.content > a:hover > div{
+.content > a:hover> div{
+    border: solid 0.15em rgb(114, 29, 29);
+}
+
+.content > a:focus> div{
     border: solid 0.15em rgb(114, 29, 29);
 }
 
@@ -270,6 +200,19 @@ footer{
     font-size: 0.75em;
 }
 
+.coworking{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin: 0.25em 0px;
+}
+
+.coworking > div{
+    margin: 0.3em 2em 0.3em 0em;
+
+}
+
 footer img{
     margin: 10px;
 }
@@ -277,4 +220,100 @@ footer img{
 a{
     color: unset;
     text-decoration: none;
+}
+
+@media screen and (orientation: landscape) and (max-width: 1900px){
+    body, html{
+        box-sizing: content-box;
+        font-size: 5vh;
+    }
+
+    body{
+        grid-template-columns: 7fr 1fr;
+    }
+    
+    main{
+
+        height: 55%;
+    }
+    article{
+
+        height: 65%;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    .content > a{
+        width: 48%;
+        height: fit-content;
+    }
+    .item{
+        border-radius: 0.5em;
+        padding: 0.25em;
+    }
+    .info{
+        font-size: 0.9em;
+        padding-left: 0.2em;
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;
+    }
+
+    .info_name{
+        border-radius: 0.25em;
+    }
+
+    .info_description{
+        max-height: 5em;
+        overflow: hidden;
+        
+    }
+}
+
+@media screen and (orientation: portrait){
+    body{
+        font-size: 5vh;
+    }
+
+    body{
+        grid-template-columns: 4fr 1fr;
+    }
+
+    .content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .info{
+        padding-left: 1em;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1900px){
+    body, html{
+        font-size: 3vh;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 7fr 1fr;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .info{
+        padding-left: 1em;
+    }
+
+    .info_description{
+        height: 3.75em;
+        overflow: hidden;
+    }
 }

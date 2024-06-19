@@ -1,0 +1,80 @@
+aside{
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(213, 213, 230);
+}
+
+.side{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.side_top{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    aspect-ratio: 2/1;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(114, 29, 29);
+}
+
+.side_bottom{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    justify-content: flex-start;
+    height: 100%;
+}
+.links > div{
+    margin: 0.5em 0.2em 0.5em 0.5em;
+}
+.side_bottom a{
+    box-sizing: content-box;
+}
+
+.side_bottom > div > div:hover > a{
+    text-shadow: rgb(171, 64, 64) 1px 1px 1px;
+}
+
+.homeLogo{
+    min-width: 1em;
+    width: 2em;
+    aspect-ratio: 1/1;
+}
+
+.homeLogo a{
+    font-size: 46px;
+    text-align: center;
+}
+
+#goTop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    width: 100%;
+    
+}
+
+#goTop img{
+    aspect-ratio: 1/1;
+    width: 33%;
+    margin-left: 33%;
+}
+
+@media screen and (orientation: portrait)
+{
+    .links{
+        margin: 0.45em 0.2em 0.45em 0.35em;
+        font-size: 0.8em;
+    }
+}
